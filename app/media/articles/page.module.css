@@ -1,0 +1,11 @@
+﻿.section { padding: calc(var(--nav-h) + var(--sec-y)) 0 var(--sec-y); }
+.list { max-width: 780px; }
+.pressBlock { margin-top: 80px; padding-top: 48px; border-top: 1px solid var(--gray-800); max-width: 780px; }
+.pressHeading { font-size: 1.1rem; margin-bottom: 20px; color: var(--white); }
+.pressList { display: flex; flex-direction: column; gap: 14px; }
+.pressItem { display: flex; gap: 14px; align-items: baseline; font-size: 0.86rem; }
+.pressOutlet { font-weight: 700; min-width: 140px; color: var(--white); }
+.pressTitle { color: var(--gray-200); flex: 1; }
+.pressYear { color: var(--gray-400); }
+.pressNote { font-size: 0.8rem; color: var(--gray-400); margin-top: 20px; }
+.pressNote a { color: var(--brand-orange); }

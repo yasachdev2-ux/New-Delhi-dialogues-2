@@ -1,0 +1,23 @@
+﻿.hero { position: relative; padding: calc(var(--nav-h) + 90px) 0 80px; overflow: hidden; background: var(--black); }
+.bg { position: absolute; inset: 0; z-index: 0; }
+.glowBlue { position: absolute; top: -10%; left: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(30,58,138,0.35), transparent 70%); filter: blur(60px); }
+.glowOrange { position: absolute; bottom: -15%; right: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(249,115,22,0.25), transparent 70%); filter: blur(60px); }
+.inner { position: relative; z-index: 1; }
+.eyebrow { display: flex; align-items: center; gap: 10px; margin-bottom: 28px; flex-wrap: wrap; }
+.eyebrowTag { font-size: 0.74rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.6); }
+.eyebrowSep { color: rgba(255,255,255,0.3); margin-left: 10px; }
+.heading { display: flex; flex-direction: column; font-size: clamp(2.4rem, 6vw, 4.4rem); line-height: 1.08; color: var(--white); margin-bottom: 24px; }
+.headingEm { font-style: italic; color: var(--brand-orange-h); }
+.sub { max-width: 620px; font-size: 1.08rem; color: rgba(255,255,255,0.72); margin-bottom: 16px; }
+.goal { max-width: 620px; font-size: 0.98rem; color: rgba(255,255,255,0.55); margin-bottom: 40px; }
+.goal strong { color: var(--white); }
+.ctas { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 64px; }
+.btnPrimary { background: var(--brand-orange); color: var(--white); padding: 15px 30px; font-size: 0.9rem; font-weight: 600; }
+.btnGhost { border: 1px solid rgba(255,255,255,0.3); color: var(--white); padding: 15px 30px; font-size: 0.9rem; font-weight: 600; }
+.colonnade { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
+.colonnadeGroup { display: flex; align-items: center; gap: 28px; }
+.pillar { display: flex; flex-direction: column; gap: 4px; }
+.colNum { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 800; color: var(--white); }
+.colLabel { font-size: 0.7rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.06em; }
+.rule { width: 1px; height: 32px; background: rgba(255,255,255,0.15); }
+@media (max-width: 768px) { .colonnade { gap: 20px; } .colonnadeGroup { gap: 20px; } }

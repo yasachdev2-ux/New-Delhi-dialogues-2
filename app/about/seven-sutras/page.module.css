@@ -1,0 +1,6 @@
+﻿.section { padding: calc(var(--nav-h) + var(--sec-y)) 0 var(--sec-y); }
+.grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.sutra { display: flex; flex-direction: column; gap: 10px; padding: 24px; border: none; background: var(--black); }
+.numeral { font-family: var(--font-accent); font-size: 2rem; color: var(--sandstone); }
+@media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .grid { grid-template-columns: 1fr; } }

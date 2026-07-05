@@ -1,0 +1,9 @@
+﻿.hero { padding: calc(var(--nav-h) + 56px) 0 56px; background: var(--black); }
+.heroLabel { display: block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; color: var(--brand-orange); text-transform: uppercase; margin-bottom: 16px; }
+.heroTitle { font-size: clamp(2.2rem, 5vw, 3.6rem); margin-bottom: 18px; color: var(--white); }
+.heroSub { max-width: 640px; font-size: 1.02rem; color: var(--gray-200); }
+.section { padding: var(--sec-y) 0; }
+.sectionAlt { background: var(--charcoal-900); border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline); }
+.viewAllWrap { text-align: center; margin-top: 40px; }
+.viewAllLink { display: inline-block; border: 1px solid var(--hairline); color: var(--white); padding: 13px 28px; font-size: 0.86rem; font-weight: 600; }
+.viewAllLink:hover { border-color: var(--brand-orange); color: var(--brand-orange); }

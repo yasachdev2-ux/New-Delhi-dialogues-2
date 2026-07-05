@@ -1,0 +1,42 @@
+﻿.hero { padding: calc(var(--nav-h) + 56px) 0 56px; background: var(--black); }
+.heroLabel { display: block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; color: var(--brand-orange); text-transform: uppercase; margin-bottom: 16px; }
+.heroTitle { font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.1; margin-bottom: 18px; color: var(--white); }
+.heroSub { max-width: 640px; font-size: 1.02rem; color: var(--gray-200); margin-bottom: 28px; }
+
+.section { padding: var(--sec-y) 0; }
+.sectionAlt { background: var(--charcoal-900); border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline); }
+
+.introGrid { display: grid; grid-template-columns: 1.6fr 1fr; gap: 64px; }
+.lead { font-size: 1.15rem; color: var(--white); margin-bottom: 20px; }
+.lead strong { color: var(--white); }
+.pullQuote { border-left: 3px solid var(--brand-orange); padding-left: 20px; margin-top: 28px; font-family: var(--font-accent); font-size: 1.2rem; color: var(--gray-200); }
+.approachCard { background: var(--white); border: 1px solid var(--gray-100); padding: 28px; align-self: start; }
+.cardLabel { display: block; font-size: 0.66rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--brand-orange); margin-bottom: 18px; }
+.miniPillar { display: flex; gap: 12px; align-items: baseline; padding: 10px 0; border-top: 1px solid var(--gray-200); font-size: 0.88rem; color: var(--black); }
+.miniPillar:first-of-type { border-top: none; }
+.miniPillar span:first-child { font-family: var(--font-serif); font-weight: 700; color: var(--brand-blue); }
+
+.checkGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+.checkItem { display: flex; gap: 16px; }
+.checkItem span:first-child { font-size: 1.2rem; color: var(--brand-orange); }
+.checkItem strong { color: var(--white); }
+.checkItem p { font-size: 0.88rem; margin-top: 6px; color: var(--gray-200); }
+
+.pillarsGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.pillar { padding: 32px; border: 1px solid var(--hairline); }
+.pillarNum { font-family: var(--font-serif); font-size: 1.6rem; font-weight: 900; color: var(--gray-400); margin-bottom: 14px; }
+.pillar h3 { font-size: 1.1rem; margin-bottom: 10px; color: var(--white); }
+.pillar p { font-size: 0.88rem; color: var(--gray-200); }
+
+.teamGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 20px; }
+.teamNote { margin-top: 28px; font-size: 0.85rem; color: var(--gray-200); }
+.teamNote a { color: var(--brand-orange); font-weight: 600; }
+
+@media (max-width: 1100px) {
+  .introGrid { grid-template-columns: 1fr; }
+  .pillarsGrid { grid-template-columns: 1fr 1fr; }
+  .teamGrid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 768px) {
+  .checkGrid, .focusGrid, .pillarsGrid, .teamGrid { grid-template-columns: 1fr; }
+}

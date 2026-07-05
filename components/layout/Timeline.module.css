@@ -1,0 +1,11 @@
+﻿.axis { position: relative; padding-left: 8px; }
+.line { position: absolute; top: 0; bottom: 0; left: 21px; width: 1px; background: var(--gray-200); }
+.rows { display: flex; flex-direction: column; gap: 36px; }
+.row { display: grid; grid-template-columns: 44px 1fr; gap: 20px; align-items: flex-start; }
+.marker { display: flex; justify-content: center; padding-top: 4px; }
+.dot { width: 12px; height: 12px; border-radius: 50%; background: var(--sandstone); border: 2px solid var(--sandstone-lt); box-shadow: 0 0 0 3px var(--sandstone); }
+.dotFeatured { background: var(--brand-orange); box-shadow: 0 0 0 3px rgba(249,115,22,0.2); }
+.content { padding: 4px 0; }
+.contentFeatured .itemTitle { color: var(--brand-orange); }
+.year { display: block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; color: var(--gray-400); margin-bottom: 4px; }
+.itemTitle { font-size: 1.05rem; margin-bottom: 8px; }

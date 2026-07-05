@@ -1,0 +1,18 @@
+﻿import { NextRequest, NextResponse } from 'next/server';
+
+const FASTIFY_URL = process.env.FASTIFY_API_URL ?? 'http://localhost:4000';
+
+export async function POST(req: NextRequest) {
+  try {
+    const body = await req.json();
+    const res = await fetch(`${FASTIFY_URL}/api/event-register`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+    });
+    const data = await res.json();
+    return NextResponse.json(data, { status: res.status });
+  } catch {
+    return NextResponse.json({ success: false, error: 'Registration failed' }, { status: 500 });
+  }
+}

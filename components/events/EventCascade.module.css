@@ -1,0 +1,16 @@
+﻿.filterBar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+.filterTab { font-size: 0.8rem; padding: 8px 16px; border: 1px solid var(--hairline); border-radius: 20px; color: var(--gray-200); transition: all 0.18s; background: transparent; }
+.filterTab:hover { border-color: var(--brand-orange); color: var(--white); }
+.filterTabActive { background: var(--brand-orange); border-color: var(--brand-orange); color: var(--white); }
+.cascade { display: flex; flex-direction: column; }
+.item { display: flex; gap: 20px; align-items: flex-start; padding: 22px 0; border-bottom: 1px solid var(--hairline); }
+.date { display: flex; flex-direction: column; align-items: center; width: 52px; flex-shrink: 0; }
+.day { font-family: var(--font-serif); font-size: 1.3rem; font-weight: 700; color: var(--white); }
+.month { font-size: 0.66rem; letter-spacing: 0.08em; color: var(--gray-400); }
+.body { flex: 1; }
+.type { font-size: 0.66rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--sandstone); margin-bottom: 4px; }
+.title { font-size: 1.02rem; margin-bottom: 6px; color: var(--white); }
+.desc { font-size: 0.84rem; color: var(--gray-200); }
+.tag { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; color: var(--gray-400); flex-shrink: 0; }
+.tagLive { color: var(--brand-orange); }
+.empty { padding: 40px 0; color: var(--gray-400); font-size: 0.88rem; }

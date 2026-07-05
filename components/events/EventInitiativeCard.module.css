@@ -1,0 +1,8 @@
+﻿.card, .cardFeatured { padding: 32px; border: 1px solid var(--gray-100); background: var(--white); }
+.cardFeatured { background: var(--black); color: var(--white); border-color: var(--black); }
+.num { font-family: var(--font-serif); font-size: 1.4rem; font-weight: 800; color: var(--gray-200); margin-bottom: 14px; }
+.numInv { font-family: var(--font-serif); font-size: 1.4rem; font-weight: 800; color: rgba(255,255,255,0.25); margin-bottom: 14px; }
+.title { font-size: 1.1rem; margin-bottom: 10px; color: var(--black); }
+.titleInv { font-size: 1.1rem; margin-bottom: 10px; color: var(--white); }
+.text { font-size: 0.88rem; color: var(--gray-600); }
+.textInv { font-size: 0.88rem; color: rgba(255,255,255,0.72); }

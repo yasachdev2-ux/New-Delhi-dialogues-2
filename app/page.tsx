@@ -1,65 +1,91 @@
-import Image from "next/image";
+﻿import Link from 'next/link';
+import Hero from '@/components/ui/Hero';
+import SectionHeader from '@/components/ui/SectionHeader';
+import SpeakerCarousel from '@/components/carousel/SpeakerCarousel';
+import { getRecentSpeakers } from '@/lib/content';
+import styles from './page.module.css';
 
-export default function Home() {
+const HIGHLIGHTS = [
+  { num: '01', href: '/about', title: 'About NDD', desc: "India's premier policy think-tank advancing evidence-based governance at the intersection of AI, technology, health, and society." },
+  { num: '02', href: '/media', title: 'Media and Podcast', desc: 'Conversations with policymakers, technologists, and thought leaders on the most pressing governance questions of our time.' },
+  { num: '03', href: '/events', title: 'Events', desc: 'From annual summits and international roundtables to startup pitch sessions - NDD convenes the conversations that matter.' },
+  { num: '04', href: '/events/speakers', title: 'Distinguished Speakers', desc: 'A timeline of the leaders in government, diplomacy, and public policy who have shaped NDD dialogues.' },
+];
+
+export default function HomePage() {
+  const recentSpeakers = getRecentSpeakers(8);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <>
+      <Hero
+        eyebrows={['New Delhi, India', 'Policy Think-Tank', 'Est. 2024']}
+        headingLines={['Because No Policy', 'Should Be Made']}
+        headingEm="in Isolation."
+        sub="NDD unites policymakers, researchers, industry leaders, and civil society to build evidence-based governance frameworks - advancing India's vision of ethical, human-centric AI for the world."
+        goal={<><strong>Our goal</strong> is to ensure that innovation advances <strong>public interest, equity, safety, and trust.</strong></>}
+        ctas={[
+          { label: 'Explore Our Work', href: '/about', variant: 'primary' },
+          { label: 'Partner With Us', href: '/contact', variant: 'ghost' },
+        ]}
+        stats={[
+          { value: '8+', label: 'Focus Areas' },
+          { value: 'Multi', label: 'Stakeholder Dialogues' },
+          { value: 'National', label: 'Policy Impact' },
+          { value: 'Global', label: 'Engagement' },
+        ]}
+      />
+
+      <div className={styles.strip}>
+        <div className="container">
+          <p className={styles.stripCopy}>
+            India&rsquo;s policy ecosystem on AI, technology and governance is <strong>fragmented, siloed, and disconnected</strong> from
+            the communities it serves. NDD was founded to end that isolation.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </div>
+
+      <section className={styles.section}>
+        <div className="container">
+          <SectionHeader
+            label="What We Do"
+            title={<>Where Policy Meets <span className="c-orange">Purpose</span></>}
+            intro="NDD operates across four interconnected domains to drive policy change at the intersection of technology, governance, and society."
+          />
+          <div className={styles.highlightsGrid}>
+            {HIGHLIGHTS.map((h) => (
+              <Link key={h.href} href={h.href} className={styles.hlCard}>
+                <div className={styles.hlNum}>{h.num}</div>
+                <h3>{h.title}</h3>
+                <p>{h.desc}</p>
+                <span className={styles.hlLink}>Learn More -&gt;</span>
+              </Link>
+            ))}
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section className={styles.section}>
+        <div className="container">
+          <SectionHeader
+            label="Distinguished Speakers"
+            title={<>Recent <span className="c-orange">Speakers</span></>}
+          />
+          <SpeakerCarousel speakers={recentSpeakers} />
+        </div>
+      </section>
+
+      <section className={`${styles.section} ${styles.sectionContext}`}>
+        <div className="container">
+          <SectionHeader
+            label="India's Policy Landscape"
+            title={<>Operating at the Heart of <span className="c-orange">India&rsquo;s AI Moment</span></>}
+            intro="The IndiaAI Mission and India's Seven Sutras for AI Governance signal a decisive shift. NDD sits at the centre of this transformation - bridging policy, practice, and public interest."
+          />
+          <Link href="/about/india-policy-landscape" className={styles.snapshotCta}>
+            Explore India&rsquo;s Policy Context -&gt;
+          </Link>
+        </div>
+      </section>
+    </>
   );
 }

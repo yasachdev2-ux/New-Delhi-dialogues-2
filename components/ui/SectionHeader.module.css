@@ -1,0 +1,7 @@
+﻿.hdr { margin-bottom: 52px; }
+.label { display: block; font-size: 0.66rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--brand-orange); margin-bottom: 14px; }
+.title { font-size: clamp(1.9rem, 3.6vw, 3.1rem); line-height: 1.12; }
+.intro { font-size: 1rem; max-width: 680px; margin-top: 18px; }
+.titleLight { color: var(--black); }
+.introLight { color: var(--gray-600); }
+@media (max-width: 768px) { .title { font-size: clamp(1.6rem, 5vw, 2.8rem); } .intro { font-size: 0.9rem; } }

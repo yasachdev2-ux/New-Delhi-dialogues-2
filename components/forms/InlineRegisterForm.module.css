@@ -1,0 +1,11 @@
+﻿.wrap, .wrapInv { margin-top: 20px; }
+.toggle { font-size: 0.86rem; font-weight: 600; color: var(--brand-orange); border-bottom: 1px solid var(--brand-orange); padding-bottom: 2px; }
+.wrapInv .toggle { color: var(--white); border-color: var(--white); }
+.form { display: flex; flex-direction: column; gap: 12px; margin-top: 18px; max-width: 420px; }
+.form label { display: flex; flex-direction: column; gap: 6px; font-size: 0.8rem; color: var(--gray-600); }
+.wrapInv .form label { color: rgba(255,255,255,0.7); }
+.form input { padding: 10px 12px; border: 1px solid var(--gray-200); font-size: 0.88rem; background: var(--white); color: var(--black); }
+.submit { margin-top: 6px; background: var(--brand-orange); color: var(--white); padding: 11px 20px; font-size: 0.84rem; font-weight: 600; align-self: flex-start; }
+.submit:disabled { opacity: 0.6; }
+.success { font-size: 0.82rem; color: #2f8f4e; }
+.error { font-size: 0.82rem; color: #d64545; }

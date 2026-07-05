@@ -1,0 +1,10 @@
+﻿.section { padding: calc(var(--nav-h) + var(--sec-y)) 0 var(--sec-y); max-width: 780px; margin: 0 auto; }
+.back { display: inline-block; font-size: 0.82rem; color: var(--gray-400); margin-bottom: 32px; }
+.back:hover { color: var(--brand-orange); }
+.tag { display: inline-block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--brand-orange); margin-bottom: 12px; }
+.title { font-size: clamp(1.7rem, 4vw, 2.4rem); line-height: 1.18; margin-bottom: 24px; color: var(--white); }
+.embedWrap { aspect-ratio: 16/9; background: var(--black); }
+.embed { width: 100%; height: 100%; border: 0; }
+.videoPlaceholder { aspect-ratio: 16/9; background: var(--black); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; color: rgba(255,255,255,0.4); }
+.description { font-size: 1.02rem; line-height: 1.8; margin: 28px 0; color: var(--gray-200); }
+.extLink { display: inline-block; font-size: 0.85rem; font-weight: 600; color: var(--white); border-bottom: 1px solid var(--white); padding-bottom: 2px; }

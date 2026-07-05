@@ -1,0 +1,6 @@
+﻿.item { display: flex; gap: 20px; padding: 24px 0; border-bottom: 1px solid var(--gray-200); }
+.item:hover .title { color: var(--brand-orange); }
+.num { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; color: var(--gray-200); }
+.cat { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--sandstone); margin-bottom: 6px; }
+.title { font-size: 1.08rem; color: var(--black); transition: color 0.18s; margin-bottom: 6px; }
+.meta { font-size: 0.78rem; color: var(--gray-400); }

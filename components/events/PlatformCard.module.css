@@ -1,0 +1,10 @@
+﻿.card, .cardInv { padding: 44px; border: 1px solid var(--gray-100); background: var(--white); }
+.cardInv { background: var(--black); color: var(--white); border-color: var(--black); }
+.tag { font-size: 0.66rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--brand-orange); }
+.tagInv { color: var(--brand-orange-h); }
+.title { font-size: 1.4rem; margin: 14px 0 18px; color: var(--black); }
+.titleInv { font-size: 1.4rem; margin: 14px 0 18px; color: var(--white); }
+.text { color: var(--gray-600); }
+.textInv { color: rgba(255,255,255,0.72); }
+.link { display: inline-block; margin-top: 20px; font-size: 0.86rem; font-weight: 600; color: var(--brand-orange); }
+.linkInv { display: inline-block; margin-top: 20px; font-size: 0.86rem; font-weight: 600; color: var(--white); }

@@ -1,0 +1,27 @@
+﻿:root {
+  --brand-blue: #1e3a8a;
+  --brand-blue-dark: #0f2460;
+  --brand-blue-h: #2f4fae;
+  --brand-orange: #f97316;
+  --brand-orange-h: #fb923c;
+  --sandstone: #c4a882;
+  --sandstone-lt: #f7f0e8;
+  --sandstone-mid: #e8d9c5;
+  --black: #0a0a0a;
+  --charcoal-900: #121317;
+  --white: #ffffff;
+  --gray-50: #f6f6f4;
+  --gray-100: #eaeae6;
+  --gray-200: #d4d4cc;
+  --gray-400: #9a9a92;
+  --gray-600: #5a5a54;
+  --gray-800: #282822;
+  --hairline: rgba(255, 255, 255, 0.1);
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-accent: "Cormorant Garamond", "Times New Roman", serif;
+  --max-w: 1160px;
+  --sec-y: 96px;
+  --nav-h: 70px;
+  --radius: 3px;
+}
