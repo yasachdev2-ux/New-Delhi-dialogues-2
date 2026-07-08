@@ -9,8 +9,9 @@ export function generateStaticParams() {
   return getAllArticles().map((a) => ({ slug: a.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const article = getArticleBySlug(params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const article = getArticleBySlug(slug);
   if (!article) return {};
   return buildMetadata({
     title: article.title,
@@ -19,14 +20,26 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   });
 }
 
-export default function ArticleDetailPage({ params }: { params: { slug: string } }) {
-  const article = getArticleBySlug(params.slug);
+export default async function ArticleDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const article = getArticleBySlug(slug);
   if (!article) notFound();
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: article.title,
+    description: article.excerpt,
+    datePublished: article.publishedAt,
+    author: { '@type': 'Person', name: article.author },
+    url: `${SITE_URL}/media/articles/${article.slug}`,
+  };
 
   return (
     <article className={styles.section}>
       <div className="container">
         <Link href="/media/articles" className={styles.back}>&larr; All Articles</Link>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         <span className={styles.category}>{article.category}</span>
         <h1 className={styles.title}>{article.title}</h1>
         <div className={styles.byline}>

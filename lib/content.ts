@@ -44,7 +44,13 @@ export function getRoundtables(limit?: number) {
 }
 
 export function getAllEvents() {
-  return [...allEvents].sort((a, b) => +new Date(a.date) - +new Date(b.date));
+  const upcoming = allEvents
+    .filter((e) => e.status === 'upcoming')
+    .sort((a, b) => +new Date(a.date) - +new Date(b.date));
+  const past = allEvents
+    .filter((e) => e.status === 'past')
+    .sort((a, b) => +new Date(b.date) - +new Date(a.date));
+  return [...upcoming, ...past];
 }
 export function getUpcomingEvents() {
   return getAllEvents().filter((e) => e.status === 'upcoming');
@@ -64,3 +70,4 @@ export function getSpeakerBySlug(slug: string) {
 export function getRecentSpeakers(limit = 8) {
   return [...speakers].sort((a, b) => +new Date(b.date) - +new Date(a.date)).slice(0, limit);
 }
+

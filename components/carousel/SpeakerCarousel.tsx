@@ -17,7 +17,7 @@ export default function SpeakerCarousel({ speakers }: { speakers: Speaker[] }) {
 
   function start() {
     stop();
-    timerRef.current = setInterval(next, 4500);
+    timerRef.current = setInterval(next, 2000);
   }
   function stop() {
     if (timerRef.current) clearInterval(timerRef.current);
@@ -53,7 +53,21 @@ export default function SpeakerCarousel({ speakers }: { speakers: Speaker[] }) {
           {speakers.map((s) => (
             <Link key={s.slug} href={`/events/speakers/${s.slug}`} className={styles.slide}>
               <div className={styles.photoWrap}>
-                <Image src={s.image} alt={s.name} width={280} height={280} className={styles.photo} />
+
+                {s.image ? (
+
+                  <Image src={s.image} alt={s.name} width={280} height={280} className={styles.photo} />
+
+                ) : (
+
+                  <div className={styles.photoFallback} aria-hidden="true">
+
+                    {s.name.split(' ').filter((w) => w.length > 2).slice(-2).map((w) => w[0].toUpperCase()).join('')}
+
+                  </div>
+
+                )}
+
               </div>
               <div className={styles.slideBody}>
                 <h3 className={styles.topic}>{s.topic}</h3>
@@ -81,3 +95,5 @@ export default function SpeakerCarousel({ speakers }: { speakers: Speaker[] }) {
     </div>
   );
 }
+
+

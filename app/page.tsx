@@ -78,8 +78,8 @@ export default function HomePage() {
         <div className="container">
           <SectionHeader
             label="India's Policy Landscape"
-            title={<>Operating at the Heart of <span className="c-orange">India&rsquo;s AI Moment</span></>}
-            intro="The IndiaAI Mission and India's Seven Sutras for AI Governance signal a decisive shift. NDD sits at the centre of this transformation - bridging policy, practice, and public interest."
+            title={<>Understanding the Issues Shaping <span className="c-orange">Tomorrow</span></>}
+            intro="From AI and Digital Governance to Climate, Health, Trade, Education, and Global Affairs."
           />
           <Link href="/about/india-policy-landscape" className={styles.snapshotCta}>
             Explore India&rsquo;s Policy Context -&gt;

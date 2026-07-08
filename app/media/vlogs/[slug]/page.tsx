@@ -9,8 +9,9 @@ export function generateStaticParams() {
   return getAllVlogs().map((v) => ({ slug: v.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const vlog = getVlogBySlug(params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const vlog = getVlogBySlug(slug);
   if (!vlog) return {};
   return buildMetadata({
     title: vlog.title,
@@ -20,14 +21,26 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   });
 }
 
-export default function VlogDetailPage({ params }: { params: { slug: string } }) {
-  const vlog = getVlogBySlug(params.slug);
+export default async function VlogDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const vlog = getVlogBySlug(slug);
   if (!vlog) notFound();
+
+  const jsonLd = vlog.youtubeId ? {
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    name: vlog.title,
+    description: vlog.description,
+    thumbnailUrl: `https://img.youtube.com/vi/${vlog.youtubeId}/hqdefault.jpg`,
+    embedUrl: `https://www.youtube.com/embed/${vlog.youtubeId}`,
+    url: `${SITE_URL}/media/vlogs/${vlog.slug}`,
+  } : null;
 
   return (
     <section className={styles.section}>
       <div className="container">
         <Link href="/media/vlogs" className={styles.back}>&larr; All Vlogs</Link>
+        {jsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />}
         <span className={styles.tag}>{vlog.tag}</span>
         <h1 className={styles.title}>{vlog.title}</h1>
         {vlog.youtubeId ? (

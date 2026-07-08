@@ -28,7 +28,7 @@ export default function MediaHubPage() {
       </div>
       <section className={styles.section}>
         <div className="container">
-          <SectionHeader label="Explore" title={<>Where to <span className="c-orange">Start</span></>} tone="light" />
+          <SectionHeader label="Explore" title={<>Where to <span className="c-orange">Start</span></>} />
           <div className={styles.grid}>
             {SECTIONS.map((s) => (
               <Link key={s.href} href={s.href} className={styles.card}>

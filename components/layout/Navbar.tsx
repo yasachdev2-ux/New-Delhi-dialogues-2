@@ -16,7 +16,7 @@ const NAV_ITEMS = [
       { label: 'How We Work', href: '/about#how-we-work' },
       { label: 'People Behind NDD', href: '/about#people-behind-ndd' },
       { label: "India's Policy Landscape", href: '/about/india-policy-landscape' },
-      { label: 'Seven Sutras', href: '/about/seven-sutras' },
+      { label: 'Our Focus Areas', href: '/about/focus-areas' },
     ],
   },
   {
@@ -102,3 +102,5 @@ export default function Navbar() {
     </nav>
   );
 }
+
+

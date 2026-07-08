@@ -10,9 +10,9 @@
   display: flex; align-items: center; justify-content: space-between;
 }
 .brand { display: flex; align-items: center; gap: 10px; }
-.brandLogo { height: 54px; width: auto; }
+.brandLogo { height: 104px; width: auto; }
 .toggle { display: none; flex-direction: column; gap: 5px; padding: 8px; }
-.toggleBar { width: 22px; height: 2px; background: var(--black); transition: transform 0.2s, opacity 0.2s; }
+.toggleBar { width: 24px; height: 2px; background: var(--black); transition: transform 0.2s, opacity 0.2s; }
 
 .links { display: flex; align-items: center; gap: 4px; }
 .dropdownItem { position: relative; }
@@ -45,7 +45,7 @@
 
 @media (max-width: 768px) {
   .inner { padding: 0 24px; }
-  .brandLogo { height: 40px; }
+  .brandLogo { height: 68px; }
   .toggle { display: flex; }
   .links {
     display: none; position: absolute; top: var(--nav-h); left: 0; right: 0;
@@ -64,3 +64,4 @@
   .link { padding: 12px 24px; width: 100%; justify-content: space-between; }
   .cta { margin: 4px 24px; text-align: center; }
 }
+

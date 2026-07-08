@@ -1,23 +1,20 @@
 ﻿.footer { background: var(--black); color: var(--white); }
-.top {
-  max-width: var(--max-w); margin: 0 auto; padding: 64px 52px 40px;
-  display: flex; justify-content: space-between; gap: 48px; flex-wrap: wrap;
-}
-.logo { font-family: var(--font-serif); font-size: 1.6rem; font-weight: 800; }
-.tagline { margin-top: 12px; color: rgba(255,255,255,0.75); }
-.sub { margin-top: 6px; font-size: 0.78rem; color: rgba(255,255,255,0.45); text-transform: uppercase; letter-spacing: 0.1em; }
-.location { margin-top: 10px; font-size: 0.82rem; color: rgba(255,255,255,0.55); }
-.nav { display: flex; gap: 56px; flex-wrap: wrap; }
-.col h5 { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.4); margin-bottom: 14px; }
-.col li { margin-bottom: 9px; }
-.col a { font-size: 0.84rem; color: rgba(255,255,255,0.75); transition: color 0.18s; }
+.top {max-width: var(--max-w); margin: 0 auto; padding: 64px 52px 40px;display: flex; justify-content: space-between; gap: 48px; flex-wrap: wrap;align-items:flex-start;}
+.logo{margin-bottom:24px;}
+.tagline{margin-bottom:22px;}
+.sub{margin-bottom:18px;}
+.location{margin-top:0;}
+.nav { display: flex; gap:64px;}
+.col h5 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.4); margin-bottom: 14px; }
+.col li { margin-bottom: 16px; }
+.col a { font-size: 0.84rem; color: rgba(255,255,255,0.75); transition: color 0.18s;line-height:1.8; }
 .col a:hover { color: var(--brand-orange); }
-.bottom {
-  border-top: 1px solid rgba(255,255,255,0.08);
-  padding: 20px 52px; max-width: var(--max-w); margin: 0 auto;
-  display: flex; justify-content: space-between; font-size: 0.78rem; color: rgba(255,255,255,0.4);
-}
+.bottom{display:flex;align-items:center;justify-content:space-between;gap:20px;} 
 @media (max-width: 768px) {
-  .top { padding: 48px 24px 32px; flex-direction: column; gap: 32px; }
-  .bottom { flex-direction: column; gap: 8px; padding: 20px 24px; text-align: center; }
+  .top { padding: 24px 16px 27px; flex-direction: column; gap: 32px; }
+  .bottom { flex-direction: column; gap: 8px; padding: 10px 20px; text-align: center; }
 }
+
+.footerLogo { height: 104px; width: auto; margin-bottom: 16px; }
+
+

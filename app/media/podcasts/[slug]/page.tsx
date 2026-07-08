@@ -9,8 +9,9 @@ export function generateStaticParams() {
   return getAllPodcasts().map((p) => ({ slug: p.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const podcast = getPodcastBySlug(params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const podcast = getPodcastBySlug(slug);
   if (!podcast) return {};
   return buildMetadata({
     title: podcast.title,
@@ -20,8 +21,9 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   });
 }
 
-export default function PodcastDetailPage({ params }: { params: { slug: string } }) {
-  const podcast = getPodcastBySlug(params.slug);
+export default async function PodcastDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const podcast = getPodcastBySlug(slug);
   if (!podcast) notFound();
 
   const jsonLd = {

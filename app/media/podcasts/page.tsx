@@ -18,7 +18,7 @@ export default function PodcastsPage() {
   return (
     <section className={styles.section}>
       <div className="container">
-        <SectionHeader label="Podcasts" title={<>Flagship <span className="c-orange">Podcast</span></>} tone="light" />
+        <SectionHeader label="Podcasts" title={<>Flagship <span className="c-orange">Podcast</span></>} />
         <div className={styles.intro}>
           <div>
             <h2 className={styles.showTitle}>New Delhi Dialogues Podcast</h2>

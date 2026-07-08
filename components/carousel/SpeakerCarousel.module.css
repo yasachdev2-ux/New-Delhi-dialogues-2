@@ -1,6 +1,6 @@
 ﻿.wrap { position: relative; max-width: 900px; margin: 0 auto; }
 .viewport { overflow: hidden; }
-.track { display: flex; transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1); }
+.track { display: flex; transition: transform 0.35s cubic-bezier(0.65, 0, 0.35, 1); }
 .slide { flex: 0 0 100%; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 20px; }
 .photoWrap { width: 200px; height: 200px; border-radius: 50%; overflow: hidden; border: 3px solid var(--brand-orange); margin-bottom: 24px; }
 .photo { width: 100%; height: 100%; object-fit: cover; }
@@ -23,3 +23,6 @@
   .arrowNext { right: 4px; }
   .photoWrap { width: 140px; height: 140px; }
 }
+
+
+.photoFallback { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: var(--brand-orange); color: var(--white); font-size: 2rem; font-weight: 700; }

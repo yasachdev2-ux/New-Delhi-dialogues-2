@@ -1,4 +1,5 @@
 ﻿import Link from 'next/link';
+import Image from 'next/image';
 import styles from './Footer.module.css';
 
 const PLATFORM_LINKS = [
@@ -17,9 +18,10 @@ const LEGAL_LINKS = [
 
 const SOCIAL_LINKS = [
   { label: 'LinkedIn', href: 'https://www.linkedin.com/company/newdelhidialogues' },
-  { label: 'Twitter (X)', href: 'https://twitter.com/NDDialogues' },
-  { label: 'YouTube', href: 'https://www.youtube.com/@NewDelhiDialogues' },
-  { label: 'Instagram', href: 'https://www.instagram.com/newdelhidialogues' },
+  { label: 'Twitter (X)', href: 'https://x.com/NDDsecretariat' },
+  { label: 'YouTube', href: 'https://youtube.com/@thenewdelhidialogues?si=wntaCV42MmhLQcGf' },
+  { label: 'Instagram', href: 'https://www.instagram.com/newdelhidialogues?igsh=MW1oMDlnMmVsZGdhcg==' },
+  { label: 'Facebook', href: 'https://www.facebook.com/NewDelhiDialogues.org' },
 ];
 
 export default function Footer() {
@@ -27,7 +29,7 @@ export default function Footer() {
     <footer className={styles.footer} role="contentinfo">
       <div className={styles.top}>
         <div className={styles.brand}>
-          <span className={styles.logo}>NDD</span>
+          <Image src="/images/logo.png" alt="New Delhi Dialogues" width={160} height={160} className={styles.footerLogo} />
           <p className={styles.tagline}><em>Because No Policy Should Be Made in Isolation.</em></p>
           <p className={styles.sub}>Policy &middot; Ethics &middot; Impact</p>
           <p className={styles.location}>New Delhi, India</p>

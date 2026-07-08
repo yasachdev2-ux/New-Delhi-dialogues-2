@@ -6,42 +6,43 @@ import styles from './page.module.css';
 
 export const metadata: Metadata = buildMetadata({
   title: "India's Policy Landscape",
-  description: "How the IndiaAI Mission, India's AI Governance Guidelines, and the Digital India framework are shaping India's approach to responsible AI — and where NDD fits.",
+  description: "How AI and Digital Governance to Climate, Health, Trade, Education, and Global Affairs affect tommorrow and where NDD fits.",
   path: '/about/india-policy-landscape',
 });
-
-const MILESTONES: TimelineItem[] = [
-  {
-    id: 'national-ai-strategy',
-    label: '2018',
-    title: 'National AI Strategy',
-    description: "India's first National Strategy for Artificial Intelligence launched by NITI Aayog, establishing sector-specific AI applications across healthcare, agriculture, education, and urban infrastructure.",
-  },
-  {
-    id: 'indiaai-mission',
-    label: '2024',
-    title: 'IndiaAI Mission — Rs 10,371 Crore',
-    description: 'Cabinet-approved in March 2024 with a five-year budget to build compute infrastructure, indigenous foundation models, and a national dataset platform.',
-  },
-  {
-    id: 'seven-sutras-guidelines',
-    label: '2025',
-    title: 'India AI Governance Guidelines — Seven Sutras',
-    description: "India's first systematic national blueprint for Safe & Trusted AI, structured around seven guiding principles.",
-    featured: true,
-  },
-];
 
 export default function PolicyLandscapePage() {
   return (
     <section className={styles.section}>
       <div className="container">
         <SectionHeader
-          label="India's Policy Landscape"
-          title={<>Operating at the Heart of <span className="c-orange">India&rsquo;s AI Moment</span></>}
-          intro="India is at an inflection point. The IndiaAI Mission (March 2024), India's AI Governance Guidelines (2025), and the Digital India framework position the country as a global leader in ethical AI. NDD sits at the centre of this transformation."
+          label="INDIA'S POLICY LANDSCAPE"
+          title={
+            <>
+              Understanding the Issues
+              <br />
+              <span className="c-orange">Shaping Tomorrow</span>
+            </>
+          }
+          intro="From AI and Digital Governance to Climate, Health, Trade, Education, and Global Affairs."
         />
-        <Timeline items={MILESTONES} />
+
+        <hr className={styles.divider} /><br/>
+
+        <div className={styles.content}>
+          <p>
+            The challenges defining India's future do not exist in silos.
+            Technology influences healthcare. Climate shapes the economy.
+            Global geopolitics affects trade. Public policy connects them all.
+          </p><br/>
+
+          <p>
+            New Delhi Dialogues serves as a platform where these intersections
+            are explored through research, dialogue, media, and stakeholder
+            engagement—bringing together diverse perspectives to develop
+            practical, evidence-informed policy solutions for a rapidly changing
+            world.
+          </p>
+        </div>
       </div>
     </section>
   );

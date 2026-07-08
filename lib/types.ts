@@ -95,9 +95,9 @@ export interface Speaker {
   slug: string;
   name: string;
   designation: string;
-  organisation: string;
   topic: string;
   date: string;
   image: string;
   location?: string;
 }
+

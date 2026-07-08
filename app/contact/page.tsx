@@ -10,10 +10,11 @@ export const metadata: Metadata = buildMetadata({
 });
 
 const SOCIALS = [
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/company/newdelhidialogues' },
-  { label: 'Twitter (X)', href: 'https://twitter.com/NDDialogues' },
-  { label: 'YouTube', href: 'https://www.youtube.com/@NewDelhiDialogues' },
-  { label: 'Instagram', href: 'https://www.instagram.com/newdelhidialogues' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/company/newdelhidialogues/' },
+  { label: 'Twitter (X)', href: 'https://x.com/NDDsecretariat' },
+  { label: 'YouTube', href: 'https://youtube.com/@thenewdelhidialogues?si=wntaCV42MmhLQcGf' },
+  { label: 'Instagram', href: 'https://www.instagram.com/newdelhidialogues?igsh=MW1oMDlnMmVsZGdhcg==' },
+  { label: 'Facebook', href: 'https://www.facebook.com/NewDelhiDialogues.org' },
 ];
 
 export default function ContactPage() {
@@ -43,3 +44,5 @@ export default function ContactPage() {
     </section>
   );
 }
+
+

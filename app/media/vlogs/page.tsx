@@ -20,7 +20,7 @@ export default function VlogsPage() {
           label="Vlogs"
           title={<>Watch NDD <span className="c-orange">Conversations</span></>}
           intro="Recorded sessions, panel discussions, and keynote addresses from NDD events and dialogues."
-          tone="light"
+         
         />
         <div className={styles.grid}>
           {vlogs.map((v) => <VideoCard key={v.slug} vlog={v} />)}

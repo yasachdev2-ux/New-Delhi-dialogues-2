@@ -40,7 +40,7 @@ export default function SpeakerTimeline({ speakers }: { speakers: Speaker[] }) {
                   </span>
                   <h3 className={styles.topic}>{s.topic}</h3>
                   <p className={styles.name}>{s.name}</p>
-                  <p className={styles.role}>{s.designation}{s.organisation ? `, ${s.organisation}` : ''}</p>
+                  <p className={styles.role}>{s.designation}</p>
                 </div>
               </Link>
             </div>
@@ -54,3 +54,5 @@ export default function SpeakerTimeline({ speakers }: { speakers: Speaker[] }) {
     </div>
   );
 }
+
+

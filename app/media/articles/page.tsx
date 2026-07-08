@@ -17,7 +17,7 @@ export default function ArticlesPage() {
   return (
     <section className={styles.section}>
       <div className="container">
-        <SectionHeader label="Articles" title={<>Research and <span className="c-orange">Analysis</span></>} tone="light" />
+        <SectionHeader label="Articles" title={<>Research and <span className="c-orange">Analysis</span></>} />
         <div className={styles.list}>
           {articles.map((a, i) => <ArticleCard key={a.slug} article={a} index={i} />)}
         </div>
